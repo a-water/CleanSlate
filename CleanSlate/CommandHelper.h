@@ -16,9 +16,11 @@
 //  TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 //  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface CommandHelper : NSObject
+
++(void)toggleIcons:(BOOL)hideIcons;
++(BOOL)areIconsShowing;
 
 @end
-
