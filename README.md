@@ -2,7 +2,8 @@
 An OS X app that allows you to show/hide your desktop items with a single click! 
 
 # How it works
-This app is basically a wrapper around the terminal command "defaults write com.apple.finder CreateDesktop"
+This app is basically a wrapper around the terminal command "defaults write com.apple.finder CreateDesktop".
+Right click the menu bar icon to access the menu.
 
 # Can I contribute?
 Absolutely! My inital version is very basic, meaning there is plenty of room for improvements. Feel free to submit a pull request!
