@@ -1,5 +1,6 @@
 # CleanSlate
-An OS X app that allows you to show/hide your desktop items with a single click! 
+An OS X app that allows you to show/hide your desktop items with a single click!
+I was only able to test on 10.10 Yosemite, if anyone has issues on any previous version of OS X let me know.
 
 # How it works
 This app is basically a wrapper around the terminal command "defaults write com.apple.finder CreateDesktop".
