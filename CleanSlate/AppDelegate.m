@@ -55,21 +55,20 @@ LaunchAtLoginController *launchController;
 
 - (void) determineIconState{
     
-    NSImage *menuBarImage = [NSImage imageNamed:@"bat23"];
-    NSImage *menuBarImageSelected = [NSImage imageNamed:@"bat23_selected"];
+    NSImage *menuBarImage = [NSImage imageNamed:@"icon"];
+    [self.statusItem.button setImage:menuBarImage];
     
     // Check if system is running anything less than 10.10
     BOOL preYosemite = (floor(NSAppKitVersionNumber) <= NSAppKitVersionNumber10_9);
     if(!preYosemite) {
         [menuBarImage setTemplate:YES];
-        [menuBarImageSelected setTemplate:YES];
     }
     
     if(self.isHidingEnabled) {
-        [self.statusItem.button setImage:menuBarImageSelected];
+        self.statusItem.button.appearsDisabled = NO;
         self.isHidingEnabled = false;
     } else {
-        [self.statusItem.button setImage:menuBarImage];
+        self.statusItem.button.appearsDisabled = YES;
         self.isHidingEnabled = true;
     }
     
@@ -102,7 +101,7 @@ LaunchAtLoginController *launchController;
     if(startOnLogin) {
         self.startOnLaunchItem.state = NSOnState;
     } else {
-        self.startOnLaunchItem.state =NSOffState;
+        self.startOnLaunchItem.state = NSOffState;
     }
 }
 
