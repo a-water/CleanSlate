@@ -10,9 +10,9 @@ Right click the menu bar icon to access the menu.
 Absolutely! My inital version is very basic, meaning there is plenty of room for improvements. Feel free to submit a pull request!
 
 # Special Thanks
-A lot of code inspiration was borrowed from https://github.com/newmarcel/KeepingYouAwake.
-Also thanks to https://github.com/Mozketo/LaunchAtLoginController and https://github.com/biocross/LaunchAtLoginController--with-ARC- for simplifying things.
-Another thanks to artworkbean and thenounproject for the icon!
+1. A lot of code inspiration was borrowed from https://github.com/newmarcel/KeepingYouAwake.
+2. Also thanks to https://github.com/Mozketo/LaunchAtLoginController and https://github.com/biocross/LaunchAtLoginController--with-ARC- for simplifying things.
+3. Another thanks to artworkbean and thenounproject for the icon!
 
 # License
 (The MIT License)
