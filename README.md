@@ -10,6 +10,7 @@ Absolutely! My inital version is very basic, meaning there is plenty of room for
 # Special Thanks
 A lot of code inspiration was borrowed from https://github.com/newmarcel/KeepingYouAwake.
 Also thanks to https://github.com/Mozketo/LaunchAtLoginController and https://github.com/biocross/LaunchAtLoginController--with-ARC- for simplifying things.
+Another thanks to artworkbean and thenounproject for the icon!
 
 # License
 (The MIT License)
