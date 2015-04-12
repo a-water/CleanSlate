@@ -106,7 +106,7 @@ LaunchAtLoginController *launchController;
 }
 
 - (IBAction)launchAbout:(id)sender {
-    NSString *githubURL = @"https://github.com/awaterhouse/snide";
+    NSString *githubURL = @"https://github.com/awaterhouse/CleanSlate";
     [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:githubURL]];
 }
 
