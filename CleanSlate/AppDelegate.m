@@ -55,7 +55,7 @@ LaunchAtLoginController *launchController;
 
 - (void) determineIconState{
     
-    NSImage *menuBarImage = [NSImage imageNamed:@"icon"];
+    NSImage *menuBarImage = [NSImage imageNamed:@"menuBarIcon"];
     [self.statusItem.button setImage:menuBarImage];
     
     // Check if system is running anything less than 10.10
