@@ -5,6 +5,7 @@ I was only able to test on 10.10 Yosemite, if anyone has issues on any previous 
 
 # How it works
 This app is basically a wrapper around the terminal command "defaults write com.apple.finder CreateDesktop".
+
 Once done, Finder will restart and your Desktop icons will either be hidden or showing once again.
 
 Right click the menu bar icon to access the menu.
