@@ -24,34 +24,43 @@ NSString *const DEFAULTS_PATH = @"/usr/bin/defaults";
 
 + (void) toggleIcons:(BOOL)hideIcons {
     
+    // Hide/Show icons
     NSTask *toggleTask = [[NSTask alloc]init];
     [toggleTask setLaunchPath:DEFAULTS_PATH];
-    
     NSString *hideOrShow = hideIcons ? @"true" : @"false";
     NSArray *args = [NSArray arrayWithObjects:@"write", @"com.apple.finder", @"CreateDesktop", @"-bool", hideOrShow, nil];
-    
     [toggleTask setArguments:args];
     [toggleTask launch];
+    [toggleTask waitUntilExit];
     
+    // In the app hasn't been used for a while, the initial command
+    // will not work. The statement below is a form of retry logic.
+    if([self areIconsShowing] != hideIcons) {
+        [self toggleIcons:hideIcons];
+    }
+    
+    // Kill Finder after hiding/showing desktop icons
     NSTask *killTask = [[NSTask alloc]init];
     [killTask setLaunchPath:@"/usr/bin/killall"];
     [killTask setArguments:[NSArray arrayWithObjects:@"Finder", nil]];
     [killTask launch];
+    [killTask waitUntilExit];
     
 }
 
 + (BOOL) areIconsShowing {
+    
+    // Check the value of CreateDesktop
     NSTask *checkDefaultsTask = [[NSTask alloc]init];
     [checkDefaultsTask setLaunchPath:DEFAULTS_PATH];
-    
     NSArray *args = [NSArray arrayWithObjects:@"read", @"com.apple.finder", @"CreateDesktop", nil];
     [checkDefaultsTask setArguments:args];
-    
     NSPipe *output = [NSPipe pipe];
     [checkDefaultsTask setStandardOutput:output];
-    
     [checkDefaultsTask launch];
+    [checkDefaultsTask waitUntilExit];
     
+    // Read output of checkDefaultsTask command
     NSFileHandle *read = [output fileHandleForReading];
     NSData *dataRead = [read readDataToEndOfFile];
     NSString *stringRead = [[NSString alloc] initWithData:dataRead encoding:NSUTF8StringEncoding];
