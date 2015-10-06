@@ -11,7 +11,7 @@ Once done, Finder will restart and your Desktop icons will either be hidden or s
 Right click the menu bar icon to access the menu.
 
 # Can I contribute?
-Absolutely! My inital version is very basic, meaning there is plenty of room for improvements. 
+Absolutely! My initial version is very basic, meaning there is plenty of room for improvements. 
 Feel free to submit a pull request!
 
 # Special Thanks
